@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UIEmpleadoRegular.AsistenciaActivity"
+    android:background="@drawable/gradient_profile"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Mis Asistencias"
+        android:textSize="36sp"
+        android:textColor="@color/colorWhite"
+        />
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/cardView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/txtTitulo"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_marginTop="55dp"
+
+       app:cardCornerRadius="24dp"
+       app:cardElevation="4dp"
+       app:cardBackgroundColor="@color/colorWhite">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="15dp"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:padding="7dp">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:text="Asistencias :"
+                   android:textSize="15dp" />
+               <TextView
+                   android:id="@+id/txtPorcenA"
+                   android:layout_marginLeft="4dp"
+                   android:textColor="@color/colorAccent"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+               />
+               <TextView
+                   android:layout_marginStart="60dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="15dp"
+                   android:text="Faltas :"
+                   />
+               <TextView
+                   android:id="@+id/txtPorcenF"
+                   android:layout_marginLeft="4dp"
+                   android:textColor="@color/colorRed"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:padding="7dp">
+
+           <ProgressBar
+               android:id="@+id/progressBar"
+               style="?android:attr/progressBarStyleHorizontal"
+               android:layout_width="match_parent"
+               android:layout_height="8dp"
+               android:progressDrawable="@drawable/custom_progress"
+               android:layout_weight="1"
+               android:progress="25"/>
+           </LinearLayout>
+
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/rvAsis"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="8dp" />
+           </ScrollView>
+       </LinearLayout>
+   </androidx.cardview.widget.CardView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/cardView"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp"
+    android:gravity="center">
+     <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+         android:textAllCaps="false"
+            android:textSize="18sp"
+
+           />
+
+      <Button
+            android:id="@+id/btnJustificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/justificar"
+            android:textSize="18sp"
+          android:textAllCaps="false"
+            android:layout_toEndOf="@id/btnSalir"
+          android:layout_marginLeft="20dp"
+
+            />
+       </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

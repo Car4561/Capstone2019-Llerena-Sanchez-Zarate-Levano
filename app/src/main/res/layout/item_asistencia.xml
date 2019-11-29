@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="?selectableItemBackground"
+
+    android:padding="7dp">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="8/11/2019"
+        android:textSize="15dp"
+       />
+
+    <CheckBox
+        android:id="@+id/chxAsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/container"
+        android:layout_marginStart="95dp"
+        android:text="Asistio"
+        android:textSize="15dp"
+
+        tools:ignore="NotSibling" />
+
+    <CheckBox
+        android:id="@+id/chxJust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/chxAsis"
+        android:layout_marginStart="30dp"
+        android:textSize="15dp"
+        android:text="Justificó"
+      />
+   </RelativeLayout>
+
+</LinearLayout>
